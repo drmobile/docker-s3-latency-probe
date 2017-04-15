@@ -14,4 +14,4 @@ ADD entry.sh /root
 
 WORKDIR /root
 
-CMD ["/bin/sh", "-c", "/root/entry.sh > /var/log/monitor.out 2>&1"]
+CMD ["/bin/sh", "-c", "/root/entry.sh > /var/log/probe.out 2>&1"]
