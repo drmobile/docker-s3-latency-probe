@@ -2,7 +2,7 @@
 IMAGE=jonascheng/s3-latency-probe
 NAME=s3-latency-probe
 BUCKET=pepper-int-backend-media-temp-video
-DATE=`date -d 'yesterday' +'%Y%m%d%H%M'`
+DATE=`date +'%Y%m%d%H%M'`
 LOG=/var/log/${NAME}/${DATE}
 
 mkdir -p ${LOG}
