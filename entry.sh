@@ -10,9 +10,10 @@ traceroute -T ${S3_HOSTNAME}
 
 echo
 echo "============================================="
-echo "mtr -r ${S3_HOSTNAME}"
+echo "mtr -rnc 200 ${S3_HOSTNAME}"
 echo
-mtr -r ${S3_HOSTNAME}
+#mtr -r ${S3_HOSTNAME}
+mtr -rnc 200 ${S3_HOSTNAME}
 
 echo
 echo "============================================="
