@@ -1,19 +1,22 @@
 #!/bin/bash
 
+
 S3_HOSTNAME=${S3_BUCKET_NAME}.s3-${AWS_DEFAULT_REGION}.amazonaws.com
 
-echo
-echo "============================================="
-echo "traceroute -T ${S3_HOSTNAME}"
-echo
-traceroute -T ${S3_HOSTNAME}
+for hostname in ${S3_HOSTNAME} api-integ.soocii.me api-staging.soocii.me api.soocii.me
+do
+    echo
+    echo "============================================="
+    echo "traceroute -T ${hostname}"
+    echo
+    traceroute -T ${hostname}
 
-echo
-echo "============================================="
-echo "mtr -rnc 200 ${S3_HOSTNAME}"
-echo
-#mtr -r ${S3_HOSTNAME}
-mtr -rnc 200 ${S3_HOSTNAME}
+    echo
+    echo "============================================="
+    echo "mtr -rnc 200 ${hostname}"
+    echo
+    mtr -rnc 200 ${hostname}
+done
 
 echo
 echo "============================================="
