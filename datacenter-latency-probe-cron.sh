@@ -1,6 +1,6 @@
 #!/bin/bash
-IMAGE=jonascheng/s3-latency-probe
-NAME=s3-latency-probe
+IMAGE=soocii/datacenter-latency-probe
+NAME=datacenter-latency-probe
 BUCKET=pepper-int-backend-media-temp-video
 DATE=`date +'%Y%m%d%H%M'`
 LOG=/var/log/${NAME}/${DATE}
