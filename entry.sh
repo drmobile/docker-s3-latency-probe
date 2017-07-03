@@ -3,7 +3,7 @@
 
 S3_HOSTNAME=${S3_BUCKET_NAME}.s3-${AWS_DEFAULT_REGION}.amazonaws.com
 
-for hostname in ${S3_HOSTNAME} api-integ.soocii.me api-staging.soocii.me api.soocii.me
+for hostname in ${S3_HOSTNAME} api-staging.soocii.me api.soocii.me
 do
     echo
     echo "============================================="
